@@ -199,7 +199,7 @@ public class TicTacToeGame {
 		int n = (int) Math.sqrt(boardArray.length);
 		CellValue[] newArray = new CellValue[boardArray.length];
 		for (int i = 0; i < boardArray.length; i++) { // Transpose matrix
-      newArray[(i % n) * n + (i / n)] = boardArray[i];
+      			newArray[(i % n) * n + (i / n)] = boardArray[i];
 		}
 		newArray = flipVertSym(newArray); // Then flip along vertical axis
 		return newArray;

@@ -69,7 +69,7 @@ public class ComputerMenacePlayer extends Player {
   */
   public void startNewGame(CellValue myMove){
 		super.startNewGame(myMove); // Call parent method
-    currentMoveSequence = new LinkedList<MenaceTicTacToeGame>(); // Each time a game starts, we create a new LinkedList to represent the current sequence of boards played by MENACE
+    		currentMoveSequence = new LinkedList<MenaceTicTacToeGame>(); // Each time a game starts, we create a new LinkedList to represent the current sequence of boards played by MENACE
 	}
 
   /**
@@ -78,19 +78,19 @@ public class ComputerMenacePlayer extends Player {
   *   a reference to the game on which MENACE will play
   */
   public void play (TicTacToeGame game) {
-    if(game.getLevel() == game.lines*game.columns){
-			throw new IllegalArgumentException("Game is finished already!");
-		}
+  	if(game.getLevel() == game.lines*game.columns){
+		throw new IllegalArgumentException("Game is finished already!");
+	}
 
-    for(MenaceTicTacToeGame menaceGame: allGames.get(game.getLevel())) { // Look through MENACE's stored games at the appropriate level
+    	for(MenaceTicTacToeGame menaceGame: allGames.get(game.getLevel())) { // Look through MENACE's stored games at the appropriate level
 			if(menaceGame.equalsWithSymmetry(game)) {
 				game.play(menaceGame.chooseMove()); // MenaceTicTacToeGame has a method to choose the next move based on the beads
-        currentMoveSequence.add(menaceGame); // Add a reference to this game to the list of the move sequence
+        			currentMoveSequence.add(menaceGame); // Add a reference to this game to the list of the move sequence
 				return;
 			}
 		}
 
-    throw new IllegalStateException("Game not found: " + game); // If not found (shouldn't happen)
+    	throw new IllegalStateException("Game not found: " + game); // If not found (shouldn't happen)
   }
 
   /**

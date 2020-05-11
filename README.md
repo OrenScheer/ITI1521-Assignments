@@ -3,7 +3,7 @@
 Coursework for ITI1521 (Introduction to Computing II) at the University of Ottawa.
 
 Grades received:
-| Assignment    | Mark         
+| Assignment    | Grade         
 | ------------- |:-------------:|
 | 1             | 98/100        |
 | 2             | 110/100       |

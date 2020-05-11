@@ -152,11 +152,11 @@ public class Utils {
 			originalBoard[i] = transformedBoard[i];
 		}
 
-    for (int i = 0; i < lines; i++) {
-      for (int j = 0; j < columns; j++) {
-        transformedBoard[(i + 1)*columns - 1 - j] = originalBoard[i*columns + j]; // Flip each row
-      }
-    }
+    		for (int i = 0; i < lines; i++) {
+      			for (int j = 0; j < columns; j++) {
+        			transformedBoard[(i + 1)*columns - 1 - j] = originalBoard[i*columns + j]; // Flip each row
+      			}
+		}
 
 	}
 
